@@ -1,0 +1,36 @@
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+/classes/
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.bak
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# Kommentar: Behold gjerne .mvn/wrapper/maven-wrapper.jar hvis teamet bruker Maven Wrapper
+
+### Spring Boot og Logging ###
+*.log
+logs/
+.sts4-cache/
+.springBeans/
+
+### Operativsystem-spesifikke filer ###
+.DS_Store
+Thumbs.db
+
+### Miljøvariabler og Hemmeligheter (Anbefalt) ###
+.env
+.env.local
+*.properties.local
+*.yml.local
