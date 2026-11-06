@@ -1,0 +1,30 @@
+// =======================================================================
+// REST API-Testing: Personer-ressurs
+// Bruk de grønne "Play"-knappene i margen i IntelliJ for å kjøre testene.
+// =======================================================================
+
+### Hente alle personer
+GET http://localhost:8080/api/personer
+
+### Hente person med id=..
+GET http://localhost:8080/api/personer/1
+
+### Endre etternavn på person med id=..
+PUT http://localhost:8080/api/personer/1
+Content-Type: application/json
+Api-Key: gandalf
+
+{
+  "fornavn": "Anton",
+  "etternavn": "Antonsen"
+}
+
+### Legge til en ny person
+POST http://localhost:8080/api/personer
+Content-Type: application/json
+Api-Key: gandalf
+
+{
+  "fornavn": "EndaEnNy",
+  "etternavn": "Person"
+}

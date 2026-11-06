@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="css/simple.css">
+    <title>Kjøpe krypto</title>
+</head>
+<body>
+
+<h2>Her kan du kjøpe krypto</h2>
+
+<form action="kjopekrypto" method="post">
+  <fieldset><legend>Kjøpsdetaljer</legend>
+  
+    <p>Antall  <input type="number" name="antall" value="1" step="0.1" min="0"/></p>
+    
+    <p>Krypto  <select name="krypto">
+        	<option th:each="kkode : ${kryptokoder}"
+                    th:text="${kkode}"
+                    th:value="${kkode}"
+                    th:selected="${kkode} == 'BTC'"></option>
+    </select></p>
+    
+    <p>Valuta   <select name="fiat">
+        <option th:each="fkode : ${fiatkoder}"
+                th:text="${fkode}"
+                th:value="${fkode}"
+                th:selected="${fkode} == 'NOK'"></option>
+    </select></p>
+    
+    <p><input type="submit" value="Kjøp" /></p>
+  </fieldset>
+</form>
+
+</body>
+</html>

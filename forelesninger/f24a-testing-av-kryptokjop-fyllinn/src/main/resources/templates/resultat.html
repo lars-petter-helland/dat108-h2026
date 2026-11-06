@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="css/simple.css">
+    <title>Kjøpe krypto</title>
+</head>
+
+<body>
+    <h2>Kryptokjøp resultat</h2>
+    <p th:utext="|Du kjøper ${antall} ${krypto}.<br>Totalt belop blir ${belopToDesimaler} ${fiat}.|"></p>
+    <p><a href="kjopekrypto">Kjope mer</a></p>
+</body>
+</html>
